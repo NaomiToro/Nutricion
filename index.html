@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriHealth - Página de Nutrición</title>
+    <style>
+        /* Estilos en tonos rosados */
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #ff80ab;
+            color: white;
+            padding: 1em;
+            text-align: center;
+        }
+
+        header nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin: 0 1em;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        header nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .banner {
+            background: #ffc1e3;
+            color: #4a154b;
+            text-align: center;
+            padding: 4em 0;
+        }
+
+        section {
+            padding: 2em;
+            text-align: center;
+        }
+
+        #tabla-nutricion {
+            width: 80%;
+            margin: auto;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        #tabla-nutricion th, #tabla-nutricion td {
+            border: 1px solid #ffb3c1;
+            padding: 0.5em;
+        }
+
+        #tabla-nutricion th {
+            background-color: #ff80ab;
+            color: white;
+        }
+
+        .menu-card, .faq-item {
+            border: 1px solid #ffb3c1;
+            padding: 1em;
+            margin: 1em auto;
+            width: 80%;
+            background-color: #ffe4f3;
+            border-radius: 8px;
+        }
+
+        .recipe-gallery {
+            display: flex;
+            justify-content: center;
+            gap: 1em;
+            flex-wrap: wrap;
+        }
+
+        .recipe {
+            border: 1px solid #ffb3c1;
+            padding: 1em;
+            border-radius: 8px;
+            background-color: #ffe4f3;
+            width: 200px;
+            text-align: center;
+        }
+
+        .recipe img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: auto;
+            border-radius: 8px;
+        }
+
+        form label {
+            display: block;
+            margin: 0.5em 0 0.2em;
+        }
+
+        form input, form textarea {
+            width: 100%;
+            padding: 0.5em;
+            margin-bottom: 1em;
+            border: 1px solid #ffb3c1;
+            border-radius: 4px;
+        }
+
+        form button {
+            background-color: #ff80ab;
+            color: white;
+            border: none;
+            padding: 0.7em 1.5em;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        form button:hover {
+            background-color: #e57399;
+        }
+
+        footer {
+            background-color: #ff80ab;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            margin-top: 2em;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Encabezado -->
+<header>
+    <div class="logo">
+        <h1>NutriHealth</h1>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#nutricion">Nutrición</a></li>
+            <li><a href="#planes">Planes de Alimentación</a></li>
+            <li><a href="#imc">Calculadora IMC</a></li>
+            <li><a href="#recetas">Recetas</a></li>
+            <li><a href="#faq">Preguntas Frecuentes</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Sección de Inicio -->
+<section id="inicio" class="banner">
+    <h2>Bienvenido a NutriHealth</h2>
+    <p>Tu guía para una vida saludable y una alimentación balanceada.</p>
+</section>
+
+<!-- Sección de Nutrición -->
+<section id="nutricion">
+    <h2>Nutrición</h2>
+    <p>Conoce la importancia de una dieta equilibrada y los beneficios de cada grupo de alimentos.</p>
+    <table id="tabla-nutricion">
+        <thead>
+            <tr>
+                <th>Nutriente</th>
+                <th>Beneficio</th>
+                <th>Fuentes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Proteínas</td>
+                <td>Construcción de músculos y tejidos</td>
+                <td>Carne, huevos, legumbres</td>
+            </tr>
+            <tr>
+                <td>Carbohidratos</td>
+                <td>Fuente de energía</td>
+                <td>Cereales, frutas, tubérculos</td>
+            </tr>
+            <tr>
+                <td>Grasas</td>
+                <td>Almacenamiento de energía y protección celular</td>
+                <td>Aceite de oliva, aguacate, frutos secos</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<!-- Sección de Planes de Alimentación -->
+<section id="planes">
+    <h2>Planes de Alimentación</h2>
+    <div class="menu-card">
+        <h3>Plan de Pérdida de Peso</h3>
+        <ul>
+            <li><strong>Desayuno:</strong> Avena con frutas</li>
+            <li><strong>Almuerzo:</strong> Ensalada de quinoa y pollo</li>
+            <li><strong>Cena:</strong> Salmón con verduras</li>
+        </ul>
+    </div>
+    <div class="menu-card">
+        <h3>Plan de Ganancia Muscular</h3>
+        <ul>
+            <li><strong>Desayuno:</strong> Tortilla de huevos y vegetales</li>
+            <li><strong>Almuerzo:</strong> Pechuga de pollo con arroz integral y brócoli</li>
+            <li><strong>Cena:</strong> Filete de res con ensalada</li>
+        </ul>
+    </div>
+</section>
+
+<!-- Sección de Calculadora IMC -->
+<section id="imc">
+    <h2>Calculadora de IMC</h2>
+    <p>Calcula tu Índice de Masa Corporal (IMC) para evaluar tu estado de salud.</p>
+    <form id="imcForm">
+        <label for="altura">Altura (cm):</label>
+        <input type="number" id="altura" required>
+        
+        <label for="peso">Peso (kg):</label>
+        <input type="number" id="peso" required>
+        
+        <button type="button" onclick="calcularIMC()">Calcular IMC</button>
+    </form>
+    <p id="resultadoIMC"></p>
+</section>
+
+<!-- Sección de Recetas -->
+<section id="recetas">
+    <h2>Recetas Saludables</h2>
+    <div class="recipe-gallery">
+        <div class="recipe">
+            <img src="receta1.jpg" alt="Ensalada de Quinoa">
+            <h3>Ensalada de Quinoa</h3>
+        </div>
+        <div class="recipe">
+            <img src="receta2.jpg" alt="Smoothie Verde">
+            <h3>Smoothie Verde</h3>
+        </div>
+        <div class="recipe">
+            <img src="receta3.jpg" alt="Batido de Proteína">
+            <h3>Batido de Proteína</h3>
+        </div>
+    </div>
+</section>
+
+<!-- Sección de Preguntas Frecuentes -->
+<section id="faq">
+    <h2>Preguntas Frecuentes</h2>
+    <div class="faq-item">
+        <h3>¿Qué es una dieta equilibrada?</h3>
+        <p>Es una dieta que incluye una variedad de alimentos de todos los grupos en proporciones adecuadas.</p>
+    </div>
+    <div class="faq-item">
+        <h3>¿Cuántas comidas debo hacer al día?</h3>
+        <p>Lo ideal es realizar 3 comidas principales y 1 o 2 meriendas para mantener la energía estable.</p>
+    </div>
+</section>
+
+<!-- Sección de Contacto -->
+<section id="contacto">
+    <h2>Contacto</h2>
+    <p>Si tienes alguna pregunta o quieres saber más, ¡contáctanos!</p>
+    <form action="#" method="post">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" required>
+        
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="email" required>
+        
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" rows="5" required></textarea>
+        
+        <button type="submit">Enviar</button>
+    </form>
+</section>
+
+<!-- Pie de página -->
+<footer>
+    <p>&copy; 2024 NutriHealth. Todos los derechos reservados.</p>
+</footer>
+
+<script>
+    function calcularIMC() {
+        const altura = document.getElementById('altura').value / 100;
+        const peso = document.getElementById('peso').value;
+        if (altura > 0 && peso > 0) {
+            const imc = (peso / (altura * altura)).toFixed(2);
+            document.getElementById('resultadoIMC').textContent = `Tu IMC es: ${imc}`;
+        } else {
+            document.getElementById('resultadoIMC').textContent = 'Por favor, introduce valores válidos.';
+        }
+    }
+</script>
+
+</body>
+</html>
